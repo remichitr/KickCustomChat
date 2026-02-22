@@ -14,7 +14,7 @@ RemiKickChat, Kick.com yayıncıları ve izleyicileri için geliştirilmiş, **C
 
 1.  **Depoyu Klonlayın:**
     ```bash
-    git clone [https://github.com/kullanici-adiniz/RemiKickChat.git](https://github.com/kullanici-adiniz/RemiKickChat.git)
+    git clone [https://github.com/kullanici-adiniz/RemiKickChat.git](https://github.com/remichitr/RemiKickChat.git)
     cd RemiKickChat
     ```
 
