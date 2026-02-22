@@ -1,0 +1,16 @@
+{
+    "name": "Dark Green",
+    "window_bg": "#0b0e0f",
+    "card_bg": "#191b1f",
+    "card_border": "#53fc18",
+    "accent": "#53fc18",
+    "text_main": "#ffffff",
+    "text_secondary": "#aaaaaa",
+    "input_bg": "#0b0e0f",
+    "input_border": "#333333",
+    "btn_bg_alpha": "rgba(83, 252, 24, 0.1)",
+    "btn_border_alpha": "rgba(83, 252, 24, 0.3)",
+    "btn_hover_alpha": "rgba(83, 252, 24, 0.2)",
+    "btn_disabled": "#222222",
+    "text_disabled": "#777777"
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Soft Pink",
+    "window_bg": "#1a1617",
+    "card_bg": "#241e20",
+    "card_border": "#ff85a1",
+    "accent": "#ff85a1",
+    "accent_hover": "#ffb3c1",
+    "text_main": "#ffffff",
+    "text_secondary": "#cca7af",
+    "input_bg": "#1a1617",
+    "input_border": "#3d3134",
+    "btn_bg_alpha": "rgba(255, 133, 161, 0.1)",
+    "btn_border_alpha": "rgba(255, 133, 161, 0.3)",
+    "btn_hover_alpha": "rgba(255, 133, 161, 0.2)",
+    "danger": "#ff4d4d",
+    "danger_hover": "#ff1a1a",
+    "btn_disabled": "#2b2325",
+    "text_disabled": "#665457"
+}

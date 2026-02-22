@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Giriş Başarılı | RemiKickChat</title>
+    <style>
+        body { background-color: #0B0E0F; color: white; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background-color: #191B1F; padding: 45px; border-radius: 15px; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.6); border-top: 5px solid #53FC18; animation: fadeIn 0.5s ease; width: 420px; }
+        
+        /* LOGOLAR YAN YANA */
+        .logo-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px; /* İki logo arasındaki mesafe */
+            margin-bottom: 30px;
+        }
+
+        .remi-logo {
+            height: 65px; 
+            width: auto;
+        }
+
+        .kick-logo {
+            height: 65px; /* Kick logosu Remi logosuyla eşitlendi */
+            width: auto;
+        }
+
+        /* DAHA KÜÇÜK VE ZARİF BAŞLIK */
+        h1 {
+            margin: 0 0 15px 0;
+            font-size: 24px; /* Boyut 32px'den 24px'e düşürüldü */
+            color: #53FC18;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        p { color: #aaaaaa; margin-bottom: 30px; line-height: 1.5; font-size: 16px; }
+        
+        .status-box { 
+            background: rgba(83, 252, 24, 0.08); 
+            padding: 15px; 
+            border-radius: 10px; 
+            color: #53FC18; 
+            font-weight: bold; 
+            border: 1px solid rgba(83, 252, 24, 0.2); 
+            font-size: 14px; 
+        }
+        
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="logo-row">
+            <img src="{{ url_for('static', filename='images/logo_remi.png') }}" alt="Remi Logo" class="remi-logo">
+            <img src="{{ url_for('static', filename='images/kick.png') }}" alt="Kick Logo" class="kick-logo">
+        </div>
+
+        <h1>Giriş Başarılı!</h1>
+
+        <p>Hoş geldin, <strong>{{ username }}</strong>.<br>Yetkilendirme işlemi başarıyla tamamlandı.</p>
+        
+        <div class="status-box">
+            Giriş yapıldı. Bu sekmeyi kapatabilirsin.
+        </div>
+    </div>
+    <script>setTimeout(() => { window.close(); }, 5000);</script>
+</body>
+</html>

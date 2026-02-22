@@ -1,0 +1,21 @@
+# Python sanal ortamı
+.venv/
+venv/
+ENV/
+
+# Python derleme dosyaları
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Kişisel veriler ve oturumlar
+store/store.json
+# config.json kalsın (tema ayarları için), ama store.json (tokenlar) gitmemeli.
+
+# İşletim sistemi dosyaları
+.DS_Store
+Thumbs.db
+
+# IDE dosyaları
+.vscode/
+.idea/

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html style="background-color: transparent !important;">
+<head>
+    <style>
+        html, body { 
+            background-color: transparent !important; 
+            color: white; 
+            font-family: 'Segoe UI', sans-serif; 
+            margin: 0; 
+            padding: 10px; 
+            overflow: hidden; 
+        }
+        #chat { display: flex; flex-direction: column; justify-content: flex-end; height: 98vh; }
+        
+        .msg { 
+            padding: 8px; 
+            margin-bottom: 5px; 
+            border-radius: 8px; 
+            background: rgba(25, 27, 31, 0.85); 
+            border-left: 4px solid #53fc18; 
+            animation: slideIn 0.2s ease; 
+        }
+        
+        .msg.me { 
+            border-left: 4px solid #3498db; 
+            background: rgba(41, 128, 185, 0.25); 
+        }
+        
+        .sender { color: #53fc18; font-weight: bold; margin-right: 5px; }
+        .msg.me .sender { color: #3498db; }
+        .emote { height: 28px; vertical-align: middle; }
+        
+        @keyframes slideIn { 
+            from { opacity: 0; transform: translateX(-10px); } 
+            to { opacity: 1; transform: translateX(0); } 
+        }
+    </style>
+</head>
+<body>
+    <div id="chat"></div>
+    
+    <script>
+        const chat = document.getElementById('chat');
+        const evtSource = new EventSource('/stream');
+        
+        evtSource.onmessage = (e) => {
+            const data = JSON.parse(e.data);
+            let content = data.content.replace(/\[emote:(\d+):([a-zA-Z0-9_]+)\]/g, 
+                '<img src="https://files.kick.com/emotes/$1/fullsize" class="emote">');
+            
+            const div = document.createElement('div');
+            div.className = data.is_me ? 'msg me' : 'msg';
+            div.innerHTML = `<span class="sender">${data.sender}:</span> ${content}`;
+            
+            chat.appendChild(div);
+            window.scrollTo(0, document.body.scrollHeight);
+            
+            if (chat.children.length > 50) chat.removeChild(chat.firstChild);
+        };
+    </script>
+</body>
+</html>
